@@ -1,27 +1,31 @@
 public class Automovil
 {
-    // instance variables - replace the example below with your own
-    private String marca;
-    private String modelo;
-
+    private String marca; //texto
+    private String modelo; //texto
+    private int cilindrada; //numeros
+    private boolean hibrido; //true, false
+    
     /**
      * Constructor for objects of class Automovil
      */
     public Automovil()
     {
-        // initialise instance variables
+        // initialise instance variables por defecto
         marca = "cualqueir";
         modelo = "kdjslkdsa";
+        cilindrada = 0;
+        hibrido = false;
     }
     
     /**
      * Constructor for objects of class Automovil
      */
-    public Automovil(String marca, String modelo)
+    public Automovil(String marca, String modelo, int cc, boolean hibrido)
     {
-        // initialise instance variables
         this.marca = marca;
         this.modelo = modelo;
+        this.cilindrada = cc;        
+        this.hibrido = hibrido;
     }
     
     public String getMarca() {
@@ -38,6 +42,22 @@ public class Automovil
     
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+   
+    public int getCilindrada() {
+        return cilindrada;
+    }
+    
+    public void setCilindrada(int cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+    
+    public boolean isHibrido() {
+        return hibrido;
+    }
+    
+    public void setHibrido(boolean hibrido) {
+        this.hibrido = hibrido;
     }
     
     public void imprimirInformacion(){
